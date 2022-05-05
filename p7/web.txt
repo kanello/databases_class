@@ -1,0 +1,13 @@
+For the web part of the assignment
+- You will be able to see 5 entries from each table you clicked on (except for a few listed below)
+- Currently the website is fairly self explanatory. Click through the front page then go to the page where you can select which tables to view
+- Will need to clean up the strings being passed into sql and also remove csv files from in there before the final assignment
+    - DO NOT click on any table listed as csv 
+    - DO NOT click on any table with a ';' at the end. 
+
+What is in the p7 folder (other than the triggers):
+* my greenhouse.db file => you can drop tables, add new ones and populate the db through sqlite3 greenhouse.db
+* two html pages that I will build upon for the final project
+    * home page
+    * data search page
+* the python file to run the server

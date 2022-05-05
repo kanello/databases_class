@@ -1,0 +1,89 @@
+Project - Week 2
+----------------
+
+The app powered by the database will be used to monitor and manage a fully automated greenhouse. 
+I slightly changed this from last week, where I have added a bunch of robots that do a few jobs and collect data instead of human workers.
+
+We will be getting some inputs autonomously and output insights and information to the the greenhouse manager. 
+The greenhouse manager will the schedule jobs like harvesting, deleafing and lowering using the information she has. 
+The app will be extensible to be able to generate it’s own recommendations to the greenhouse manager.
+
+We will have different robots performing the three main activities. 
+Harvesting, lowering and deleafing (plant maintenance). 
+An automated system will deal with autonomous systems like the plant feeding, watering and controlling of temperature and CO2. 
+The app will provide data for that system as well
+
+
+-----------
+--- DDL ---
+-----------
+
+create table greenhouse.sensor_measurements (
+	sensor_id text,
+	sensor_name text,
+	sensor_type text,
+	measurement_unit text,
+	measurement float,
+	sensor_position float,
+	date_captured timestamp,
+	row_number float	
+);
+
+--------
+
+create table greenhouse.crops_planted (
+	plant_id varchar(8),
+	variety varchar(8),
+	date_planted date,
+	row_number varchar	
+);
+
+---------
+
+create table greenhouse.trusses (
+	truss_id varchar(8),
+	plant_id varchar(8),
+	color_code varchar(8),
+	date_scanned timestamp,
+	x_coordinate float,
+	z_coordinate float,
+	weight_estimate_grams float,
+	weight_actual_grams float,
+	size_estimate_cm float
+	);
+
+---------
+
+create table greenhouse.crop_harvested (
+	truss_id varchar(8),
+	robot_id varchar(8),
+	job_type varchar(8),
+	status varchar(8),
+	total_mileage int
+)
+
+
+---------
+
+create table greenhouse.robot_maintenance(
+	robot_id varchar(8),
+	technician_id varchar(8),
+	job_type varchar(8)
+);
+--------
+
+create table leaf_coverage(
+	leaf_id varchar(8),
+	plant_id varchar(8),
+	x_coord float(2),
+	z_coord float(2)
+);
+-----------
+
+create table pests (
+	pest_name varchar(8),
+	pest_count int,
+	leaf_id varchar(8)
+)
+
+

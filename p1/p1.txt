@@ -1,0 +1,15 @@
+Greenhouse management system
+----------------------------
+
+I'd like to build a system to track production of tomatoes in a commercial greenhouse. Greenhouses already have these types of systems installed, I'd just like to replicate what I've seen.
+It will maintain insights on the production levels inside the greenhouse, data that helps us understand health of crops and how well we manage the greenhouse
+
+Rows: This is the basic entity which everything will be relating to. In here we will also store information like what crop this is, how many plants there are and when they were planted
+Harvesting Tracker: everyday the crop is harvested, we want to know which row was harvested and how much crop was harvested from it
+Environmental Data: To ensure the health of the plants and to optimize their yields, we want to know the temperature, humidity and light in different parts of the greenhouse. I could generate this with a raspberry pi
+Pest and Diseases: This information is manually collected normally, on a per greenhouse row basis
+Employees/Pickers: Each employee will have their employee ID and name. We will want to track how much crop they have been picking on a per week basis so they can get paid accurately
+
+
+
+
