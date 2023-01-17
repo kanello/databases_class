@@ -1,4 +1,4 @@
-from turtle import clear
+ffrom turtle import clear
 
 from numpy import var
 from scipy import rand
